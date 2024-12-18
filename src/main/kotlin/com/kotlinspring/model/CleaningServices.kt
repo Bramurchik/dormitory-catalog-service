@@ -9,7 +9,7 @@ data class CleaningService(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "service_id")
-    val id: Long = 0,
+    val serviceId: Long = 0,
 
     @Column(name = "service_type")
     val serviceType: String,

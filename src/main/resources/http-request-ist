@@ -1,0 +1,9 @@
+To proceed the main functions of the catalog those http requests are needed:
+
+GET http://localhost:0080/rooms/available --- Lists all available for rent rooms in a dormitory
+
+GET http://localhost:8080/cleaning-services/salary-report?year=SELECTED_YEAR&month=SELECTED_MONTH_NUMBER ---
+Creates a salary report for cleaning staff for the chosen month and year
+
+
+

@@ -1,6 +1,5 @@
 package com.kotlinspring.repository
 
-import com.kotlinspring.SalaryReportDTO
 import com.kotlinspring.model.CleaningService
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.Query
@@ -18,14 +17,14 @@ interface CleaningServicesRepository : JpaRepository<CleaningService, Long> {
         FROM cleaning_services cs
         JOIN employees e ON cs.cleaning_person_id = e.employee_id
         WHERE e.role = 'Cleaning Staff'
-        AND EXTRACT(YEAR FROM cs.request_date) = :yearInput
+        AND EXTRACT(YEAR FROM cs.request_date) = :yearInput --- Separating the year and month values for further comparison 
         AND EXTRACT(MONTH FROM cs.request_date) = :monthInput
         GROUP BY e.name
     """,
         nativeQuery = true // Native SQL is being used due for EXTRACT function
     )
     fun generateSalaryReport(
-        @Param("yearInput") yearInput: Int,
+        @Param("yearInput") yearInput: Int,  // binding of the value passed in the request to the function parameter.
         @Param("monthInput") monthInput: Int
     ): List<Map<String, Any>>  // Returns a map of needed parameters for furthermore transformation into DTO
 

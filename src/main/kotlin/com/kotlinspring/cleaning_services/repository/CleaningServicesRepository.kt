@@ -1,6 +1,6 @@
-package com.kotlinspring.repository
+package com.kotlinspring.cleaning_services.repository
 
-import com.kotlinspring.model.CleaningService
+import com.kotlinspring.cleaning_services.CleaningService
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.Query
 import org.springframework.data.repository.query.Param

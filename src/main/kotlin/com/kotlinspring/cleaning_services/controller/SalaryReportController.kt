@@ -1,7 +1,7 @@
-package com.kotlinspring.controller
+package com.kotlinspring.cleaning_services.controller
 
-import com.kotlinspring.SalaryReportDTO
-import com.kotlinspring.service.CleaningServicesService
+import com.kotlinspring.dtos.SalaryReportDTO
+import com.kotlinspring.cleaning_services.service.CleaningServicesService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam

@@ -1,4 +1,4 @@
-package com.kotlinspring.model
+package com.kotlinspring.blocks
 
 import jakarta.persistence.*
 

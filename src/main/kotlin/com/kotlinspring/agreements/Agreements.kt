@@ -1,5 +1,8 @@
-package com.kotlinspring.model
+package com.kotlinspring.agreements
 
+import com.kotlinspring.employees.Employee
+import com.kotlinspring.students.Student
+import com.kotlinspring.rooms.Room
 import jakarta.persistence.*
 import java.time.LocalDate
 import java.time.LocalDateTime

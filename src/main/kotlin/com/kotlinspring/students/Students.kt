@@ -1,4 +1,4 @@
-package com.kotlinspring.model
+package com.kotlinspring.students
 
 import jakarta.persistence.*
 import java.time.LocalDate

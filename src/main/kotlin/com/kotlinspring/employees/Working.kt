@@ -1,5 +1,6 @@
-package com.kotlinspring.model
+package com.kotlinspring.employees
 
+import com.kotlinspring.blocks.Block
 import jakarta.persistence.*
 import java.io.Serializable
 

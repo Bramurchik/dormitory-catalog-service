@@ -1,7 +1,7 @@
-package com.kotlinspring.service
+package com.kotlinspring.cleaning_services.service
 
-import com.kotlinspring.SalaryReportDTO
-import com.kotlinspring.repository.CleaningServicesRepository
+import com.kotlinspring.dtos.SalaryReportDTO
+import com.kotlinspring.cleaning_services.repository.CleaningServicesRepository
 import org.springframework.stereotype.Service
 
 

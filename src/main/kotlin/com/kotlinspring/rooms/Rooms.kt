@@ -1,5 +1,6 @@
-package com.kotlinspring.model
+package com.kotlinspring.rooms
 
+import com.kotlinspring.blocks.Block
 import jakarta.persistence.*
 
 @Entity

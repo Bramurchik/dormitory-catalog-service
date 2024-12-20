@@ -1,5 +1,7 @@
-package com.kotlinspring.model
+package com.kotlinspring.cleaning_services
 
+import com.kotlinspring.employees.Employee
+import com.kotlinspring.rooms.Room
 import jakarta.persistence.*
 import java.time.LocalDate
 

@@ -1,6 +1,5 @@
-package com.kotlinspring.rooms.repository
+package com.kotlinspring.rooms
 
-import com.kotlinspring.rooms.Room
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.Query
 

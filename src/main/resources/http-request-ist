@@ -1,9 +1,40 @@
 To proceed the main functions of the catalog those http requests are needed:
+-----------
+Lists all available for rent rooms in a dormitory
 
-GET http://localhost:0080/rooms/available --- Lists all available for rent rooms in a dormitory
+GET http://localhost:8080/rooms/available
 
-GET http://localhost:8080/cleaning-services/salary-report?year=SELECTED_YEAR&month=SELECTED_MONTH_NUMBER ---
+-----------
 Creates a salary report for cleaning staff for the chosen month and year
+
+GET http://localhost:8080/cleaning-services/salary-report?year=SELECTED_YEAR&month=SELECTED_MONTH_NUMBER
+
+-----------
+Adds a new student to the records
+
+POST http://localhost:8080/students
+{
+    "name": "inserted_name",
+    "surname": "inserted_surname",
+    "dob": "inserted_dob",
+    "sex": "Male/Female",
+    "phoneNumber": "-",
+    "country": "-"
+}
+-----------
+Creates an agreement inserting info about student, start/end date (date singed is current timestamp)
+
+http://localhost:8080/agreements
+{
+    "studentId": inserted_id,
+    "roomId": inserted_id,
+    "custodianId": inserted_id,
+    "startDate": "inserted_date",
+    "endDate": "inserted_date",
+    "monthlyPayment": num
+}
+
+
 
 
 

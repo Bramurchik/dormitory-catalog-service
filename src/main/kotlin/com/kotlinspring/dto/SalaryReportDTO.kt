@@ -1,4 +1,4 @@
-package com.kotlinspring.dtos
+package com.kotlinspring.dto
 
     data class SalaryReportDTO(        // DTO for storing the result of a query
         val cleanerName: String,

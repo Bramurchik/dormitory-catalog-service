@@ -1,7 +1,7 @@
 package com.kotlinspring.rooms.controller
 
 import com.kotlinspring.rooms.Room
-import com.kotlinspring.rooms.service.RoomService
+import com.kotlinspring.rooms.RoomService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController

@@ -1,18 +1,17 @@
-package com.kotlinspring.agreements.controller
+package com.kotlinspring.agreements.add_agreement
 
-import com.kotlinspring.agreements.AgreementService
-import com.kotlinspring.dto.AgreementDTO
+import com.kotlinspring.agreements.AgreementDTO
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/agreements")
-class AddNewAgreementController(private val agreementService: AgreementService) {
+class AddNewAgreementController(private val addAgreementService: AddAgreementService) {
 
     @PostMapping
     fun addAgreement(@RequestBody agreementDTO: AgreementDTO): ResponseEntity<String> {
-        agreementService.createAgreement(agreementDTO)
+        addAgreementService.createAgreement(agreementDTO)
         return ResponseEntity.status(HttpStatus.CREATED).body("Agreement created successfully")
     }
 }

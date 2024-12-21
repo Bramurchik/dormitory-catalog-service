@@ -1,9 +1,10 @@
-package com.kotlinspring.rooms
+package com.kotlinspring.rooms.avaiable_rooms
 
+import com.kotlinspring.rooms.Room
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.Query
 
-interface RoomRepository : JpaRepository<Room, Long> {
+interface AvailableRoomsRepository : JpaRepository<Room, Long> {
     @Query(
         """
         SELECT r FROM Room r

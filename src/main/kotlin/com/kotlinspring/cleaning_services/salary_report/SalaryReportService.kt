@@ -1,16 +1,15 @@
-package com.kotlinspring.cleaning_services
+package com.kotlinspring.cleaning_services.salary_report
 
-import com.kotlinspring.dto.SalaryReportDTO
 import org.springframework.stereotype.Service
 
 
 @Service
-class CleaningServicesService(
-    private val cleaningServicesRepository: CleaningServicesRepository
+class SalaryReportService(
+    private val salaryReportRepository: SalaryReportRepository
 ) {
 
     fun salaryReportService(year: Int, month: Int): List<SalaryReportDTO> {
-        val result = cleaningServicesRepository.generateSalaryReport(year, month)
+        val result = salaryReportRepository.generateSalaryReport(year, month)
         return result.map {      // Manual assignation of DTO due to usage of native SQL
             SalaryReportDTO(
                 cleanerName = it["cleanerName"] as String,

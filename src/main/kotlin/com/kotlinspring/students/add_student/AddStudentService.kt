@@ -1,10 +1,11 @@
-package com.kotlinspring.students
+package com.kotlinspring.students.add_student
 
-import com.kotlinspring.dto.StudentDTO
+import com.kotlinspring.students.Student
+import com.kotlinspring.students.StudentDTO
 import org.springframework.stereotype.Service
 
 @Service
-class StudentService(val studentRepository: StudentRepository) {
+class AddStudentService(val addStudentRepository: AddStudentRepository) {
 
     fun addStudent(studentDTO: StudentDTO): Long {
         val student = Student(
@@ -15,6 +16,6 @@ class StudentService(val studentRepository: StudentRepository) {
             phoneNumber = studentDTO.phoneNumber,
             country = studentDTO.country
         )
-        return studentRepository.save(student).studentId
+        return addStudentRepository.save(student).studentId
     }
 }

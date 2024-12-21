@@ -33,6 +33,6 @@ data class Repair(
     val room: Room,
 
     @ManyToOne
-    @JoinColumn(name = "employee_id")
+    @JoinColumn(name = "custodian_id")
     val custodian: Employee
 )

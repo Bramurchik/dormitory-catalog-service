@@ -1,10 +1,11 @@
-package com.kotlinspring.cleaning_services
+package com.kotlinspring.cleaning_services.salary_report
 
+import com.kotlinspring.cleaning_services.CleaningService
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.Query
 import org.springframework.data.repository.query.Param
 
-interface CleaningServicesRepository : JpaRepository<CleaningService, Long> {
+interface SalaryReportRepository : JpaRepository<CleaningService, Long> {
     @Query(
         """
         SELECT 

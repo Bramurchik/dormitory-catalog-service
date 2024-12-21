@@ -1,4 +1,4 @@
-package com.kotlinspring.dto
+package com.kotlinspring.students
 import java.time.LocalDate
 
 data class StudentDTO(

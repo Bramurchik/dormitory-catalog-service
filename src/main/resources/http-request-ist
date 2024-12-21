@@ -1,4 +1,6 @@
 To proceed the main functions of the catalog those http requests are needed:
+
+
 -----------
 Lists all available for rent rooms in a dormitory
 
@@ -33,6 +35,25 @@ http://localhost:8080/agreements
     "endDate": "inserted_date",
     "monthlyPayment": num
 }
+-----------
+Creates a new repair
+
+http://localhost:8080/repairs
+{
+  "roomId": inserted_id,
+  "repairType": "-",
+  "repairDate": "inserted_date",
+  "custodianId": inserted_id,
+  "cost": -,
+  "repairerName": "inserted_name",
+  "repairerContact": "-"
+}
+-----------
+Delete agreement by Id
+
+http://localhost:8080/agreements/*id*
+
+
 
 
 

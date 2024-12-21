@@ -1,4 +1,4 @@
-package com.kotlinspring.dto
+package com.kotlinspring.agreements
 
 import java.time.LocalDate
 

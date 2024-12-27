@@ -13,7 +13,6 @@ class SalaryReportServiceTest {
 
     @Autowired
     private lateinit var salaryReportService: SalaryReportService
-
     private lateinit var salaryReportRepository: SalaryReportRepository
 
     @BeforeEach
@@ -25,8 +24,7 @@ class SalaryReportServiceTest {
 
     @Test
     fun `should return correct salary report`() {
-        // Mock repository response
-        val mockResponse = listOf(
+        val mockResponse = listOf(    // Test data
             mapOf(
                 "cleanerName" to "John Doe",
                 "totalServices" to 10,
@@ -38,10 +36,9 @@ class SalaryReportServiceTest {
 
         `when`(salaryReportRepository.generateSalaryReport(2024, 12)).thenReturn(mockResponse)
 
-        // Call service method
-        val result = salaryReportService.salaryReportService(2024, 12)
+        val result = salaryReportService.salaryReportService(2024, 12) // Service method test call
 
-        // Assert the result
+
         assertEquals(1, result.size)
         assertEquals("John Doe", result[0].cleanerName)
         assertEquals(10, result[0].totalServices)

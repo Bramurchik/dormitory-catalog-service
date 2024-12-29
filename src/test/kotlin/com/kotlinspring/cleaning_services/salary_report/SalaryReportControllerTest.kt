@@ -16,7 +16,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 class SalaryReportControllerTest {
 
     @Autowired
-    private lateinit var mockMvc: MockMvc
+    private lateinit var mockMvc: MockMvc // HTTP requests imitatot
 
     @MockBean
     private lateinit var salaryReportService: SalaryReportService
@@ -28,7 +28,7 @@ class SalaryReportControllerTest {
 
     @Test
     fun `should return salary report`() {
-        val mockResponse = listOf(
+        val mockResponse = listOf(      // Test data
             SalaryReportDTO(
                 cleanerName = "John Doe",
                 totalServices = 10,
@@ -40,10 +40,12 @@ class SalaryReportControllerTest {
 
         `when`(salaryReportService.salaryReportService(2024, 12)).thenReturn(mockResponse)
 
-        val result = mockMvc.perform(get("/cleaning-services/salary-report")
-            .param("year", "2024")
-            .param("month", "12"))
-            .andExpect(status().isOk)
+        val result = mockMvc.perform(   // HTTP request imitation
+            get("/cleaning-services/salary-report")
+                .param("year", "2024")
+                .param("month", "12")
+        )
+            .andExpect(status().isOk)  // Return status should be 200
             .andReturn()
 
         val content = result.response.contentAsString

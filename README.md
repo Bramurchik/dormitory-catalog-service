@@ -1,5 +1,5 @@
 # Dormitory Catalog Service Client
-This project is a** RESTful API** Dormitory Catalog Service designed to manage different aspects of a student dormitory system. It interacts with a PostgreSQL database , ensuring efficient way to manage agreements, cleaning services, repairs, and student information.
+This project is a **RESTful API** Dormitory Catalog Service designed to manage different aspects of a student dormitory system. It interacts with a PostgreSQL database , ensuring efficient way to manage agreements, cleaning services, repairs, and student information.
 
 ## Running the Project
 Requirements:
